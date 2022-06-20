@@ -1,6 +1,6 @@
 require 'faraday_middleware'
 
-module FractionSdk
+module FraktionSdk
   module Base
     def conn(request_content_type: :json)
       return @conn[request_content_type] if defined?(@conn) && @conn[request_content_type]
