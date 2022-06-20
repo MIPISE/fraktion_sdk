@@ -12,4 +12,9 @@ require_relative 'fraktion_sdk/create_managed/create.rb'
 module FraktionSdk
   class Error < StandardError; end
   # Your code goes here...
+
+  class << self
+    include Configuration
+    include Base 
+  end
 end
