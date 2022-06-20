@@ -26,7 +26,7 @@ module FraktionSdk
 
     private
     def parse_path
-      "#{FractionSdk.url_conf}/#{name.split("::")[1..-1].join("/").downcase}"
+      "#{FraktionSdk.url_path}/#{name.split("::")[1..-1].join("/").downcase}"
     end
   end
 end
