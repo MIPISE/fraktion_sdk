@@ -1,4 +1,4 @@
-module FractionSdk
+module FraktionSdk
   module Configuration
     def configuration
       @configuration ||= OpenStruct.new
