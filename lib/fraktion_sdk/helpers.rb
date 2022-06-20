@@ -1,4 +1,4 @@
-module FractionSdk
+module FraktionSdk
   module Helpers
     def generate_uri(query = {})
       uri = parse_path
