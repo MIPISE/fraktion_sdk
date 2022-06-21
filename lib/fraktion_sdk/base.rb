@@ -6,7 +6,7 @@ module FraktionSdk
       return @conn[request_content_type] if defined?(@conn) && @conn[request_content_type]
       @conn ||= {}
       @conn[request_content_type] = Faraday.new(
-        url: "https://#{FractionSdk.configuration.url_path}",
+        url: "https://#{FraktionSdk.configuration.url_path}",
         headers: { 'accept' => 'application/json;charset=UTF-8',
                    'Content-type' => 'application/x-www-form-urlencoded' }
         ) do |conn|
@@ -18,7 +18,7 @@ module FraktionSdk
     end
 
     def auth
-      conn(request_content_type: :url_encoded).post("#{FractionSdk.configuration.url_auth}", {token: FractionSdk.configuration.token }) 
+      conn(request_content_type: :url_encoded).post("#{FraktionSdk.configuration.url_auth}", {token: FractionSdk.configuration.token }) 
       #do |req|
       #end
     end
