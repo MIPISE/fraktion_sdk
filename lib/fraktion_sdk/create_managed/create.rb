@@ -4,7 +4,6 @@ module FraktionSdk
 
     class << self
       def create
-        puts generate_uri
         FraktionSdk.authenticated do |access_token, token_type|
           #required_keys = %i[from txs]
           #params = ensure_keys(hash, required_keys)
