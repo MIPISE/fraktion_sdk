@@ -23,10 +23,6 @@ module FraktionSdk
       #end
     end
 
-    def conn
-      FraktionSdk.conn(request_content_type: :url_encoded)
-    end
-    
     def authenticated
       return yield(nil, nil) unless FraktionSdk.configuration.token == "production"
       response = auth

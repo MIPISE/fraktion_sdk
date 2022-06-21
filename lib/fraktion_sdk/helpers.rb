@@ -13,6 +13,10 @@ module FraktionSdk
       )
     end
 
+    def conn
+      FraktionSdk.conn(request_content_type: :url_encoded)
+    end
+
     def ensure_keys(hash, required_keys = ‰i[], optional_keys = %i[])
       # Ensure there are no extra keys
       hash.assert_valid_keys(required_keys + optional_keys )
