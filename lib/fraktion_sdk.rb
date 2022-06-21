@@ -10,7 +10,13 @@ require_relative 'fraktion_sdk/create_managed/create.rb'
 
 
 module FraktionSdk
-  class Error < StandardError; end
+  class Error < Exception
+    attr_reader :code
+
+    def initialize(code)
+      @code = code
+    end
+  end
   # Your code goes here...
 
   class << self
