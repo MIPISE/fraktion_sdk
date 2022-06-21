@@ -19,6 +19,14 @@ module FraktionSdk
   end
   # Your code goes here...
 
+  def self.configuration
+    @configuration ||= OpenStruct.new
+  end
+
+  def self.configure
+    yield(configuration)
+  end
+
   class << self
     include Configuration
     include Base 
