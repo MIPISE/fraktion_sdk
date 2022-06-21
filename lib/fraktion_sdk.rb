@@ -20,7 +20,7 @@ module FraktionSdk
   # Your code goes here...
 
   class << self
-    include FraktionSdk::Configuration
-    include FraktionSdk::Base 
+    include Configuration
+    include Base 
   end
 end
