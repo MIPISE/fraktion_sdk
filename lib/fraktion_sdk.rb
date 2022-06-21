@@ -22,6 +22,5 @@ module FraktionSdk
   class << self
     include Configuration
     include Base 
-    include Helpers
   end
 end
