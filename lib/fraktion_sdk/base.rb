@@ -6,7 +6,7 @@ module FraktionSdk
       return @conn[request_content_type] if defined?(@conn) && @conn[request_content_type]
       @conn ||= {}
       @conn[request_content_type] = Faraday.new(
-        url: "https://#{FractionSdk.configuration.url_auth}",
+        url: "https://#{FractionSdk.configuration.url_path}",
         headers: { 'accept' => 'application/json;charset=UTF-8',
                    'Content-type' => 'application/x-www-form-urlencoded' }
         ) do |conn|
@@ -24,6 +24,7 @@ module FraktionSdk
     end
 
     def authenticated
+      return yield(nil, nil) unless FraktionSdk.configuration.token == "production"
       response = auth
       if response.success?
         access_token, token_type = response.body.values_at('access_token', 'token_Type')
