@@ -21,6 +21,6 @@ module FraktionSdk
 
   class << self
     include FraktionSdk::Configuration
-    include Base 
+    include FraktionSdk::Base 
   end
 end
