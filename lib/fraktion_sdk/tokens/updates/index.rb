@@ -1,6 +1,6 @@
 module FraktionSdk
   module Tokens
-    module Count
+    module Updates
       extend Helpers
       def self.index(hash = {})
         FraktionSdk.authenticated do |access_token, token_type|
