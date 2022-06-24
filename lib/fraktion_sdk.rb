@@ -28,6 +28,10 @@ require_relative 'fraktion_sdk/accounts/index.rb'
 require_relative 'fraktion_sdk/accounts/address/whitelisted/index.rb'
 require_relative 'fraktion_sdk/accounts/updates/count/index.rb'
 require_relative 'fraktion_sdk/accounts/updates/index.rb'
+require_relative 'fraktion_sdk/injections/injection_id/show.rb'
+require_relative 'fraktion_sdk/injections/count/index.rb'
+require_relative 'fraktion_sdk/injections/index.rb'
+require_relative 'fraktion_sdk/version/index.rb'
 
 
 module FraktionSdk
