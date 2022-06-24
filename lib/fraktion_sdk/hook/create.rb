@@ -1,7 +1,6 @@
 module FraktionSdk
   module Hook
     extend Helpers
-
     class << self
       def create(hash = {})
         FraktionSdk.authenticated do |access_token, token_type|

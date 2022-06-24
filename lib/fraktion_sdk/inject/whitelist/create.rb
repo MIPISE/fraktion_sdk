@@ -1,6 +1,7 @@
 module FractionSdk
   module Inject
     module Whitelist
+      extend Helpers
       def self.create(hash = {})
         FraktionSdk.authenticated do |access_token, token_type|
           required_keys = %i[list]

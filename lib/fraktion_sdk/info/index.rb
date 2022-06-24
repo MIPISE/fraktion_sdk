@@ -1,5 +1,6 @@
 module FraktionSdk
   module Hooks
+    extend Helpers
     def self.index
       FraktionSdk.authenticated do |access_token, token_type|
         conn.get(generate_uri, "Content-Type" => "application/json") do |req|

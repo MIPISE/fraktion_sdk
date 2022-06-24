@@ -1,6 +1,7 @@
 module FraktionSdk
   module Inject
     module Update_operator
+      extend Helpers
       def self.create(hash = {})
         FraktionSdk.authenticated do |access_token, token_type|
           #required_keys = %i[owners info options]
