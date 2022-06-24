@@ -8,7 +8,13 @@ require_relative 'fraktion_sdk/base.rb'
 require_relative 'fraktion_sdk/helpers.rb'
 require_relative 'fraktion_sdk/create_managed/create.rb'
 require_relative 'fraktion_sdk/inject/transfer/create.rb'
-
+require_relative 'fraktion_sdk/inject/mint/create.rb'
+require_relative 'fraktion_sdk/inject/transfer/create.rb'
+require_relative 'fraktion_sdk/inject/update_operator/create.rb'
+require_relative 'fraktion_sdk/inject/whitelist/create.rb'
+require_relative 'fraktion_sdk/hook/create.rb'
+require_relative 'fraktion_sdk/hooks/index.rb'
+require_relative 'fraktion_sdk/info/index.rb'
 
 module FraktionSdk
   class Error < Exception
