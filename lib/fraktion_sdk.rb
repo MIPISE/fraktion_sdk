@@ -27,6 +27,7 @@ require_relative 'fraktion_sdk/accounts/count/index.rb'
 require_relative 'fraktion_sdk/accounts/index.rb'
 require_relative 'fraktion_sdk/accounts/address/whitelisted/index.rb'
 require_relative 'fraktion_sdk/accounts/updates/count/index.rb'
+require_relative 'fraktion_sdk/accounts/updates/index.rb'
 
 
 module FraktionSdk
