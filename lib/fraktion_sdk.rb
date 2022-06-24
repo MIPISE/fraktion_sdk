@@ -20,6 +20,9 @@ require_relative 'fraktion_sdk/tokens/updates/index.rb'
 require_relative 'fraktion_sdk/tokens/updates/count/index.rb'
 require_relative 'fraktion_sdk/tokens/index.rb'
 require_relative 'fraktion_sdk/tokens/count/index.rb'
+require_relative 'fraktion_sdk/tokens/metadata_updates/count/index.rb'
+require_relative 'fraktion_sdk/tokens/metadata_updates/index.rb'
+
 
 module FraktionSdk
   class Error < Exception
