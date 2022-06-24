@@ -15,6 +15,7 @@ require_relative 'fraktion_sdk/inject/whitelist/create.rb'
 require_relative 'fraktion_sdk/hook/create.rb'
 require_relative 'fraktion_sdk/hooks/index.rb'
 require_relative 'fraktion_sdk/info/index.rb'
+require_relative 'fraktion_sdk/tokens/token_id/index.rb'
 
 module FraktionSdk
   class Error < Exception
