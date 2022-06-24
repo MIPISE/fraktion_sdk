@@ -23,6 +23,10 @@ require_relative 'fraktion_sdk/tokens/count/index.rb'
 require_relative 'fraktion_sdk/tokens/metadata_updates/count/index.rb'
 require_relative 'fraktion_sdk/tokens/metadata_updates/index.rb'
 require_relative 'fraktion_sdk/accounts/address/show.rb'
+require_relative 'fraktion_sdk/accounts/count/index.rb'
+require_relative 'fraktion_sdk/accounts/index.rb'
+require_relative 'fraktion_sdk/accounts/address/whitelisted/index.rb'
+require_relative 'fraktion_sdk/accounts/updates/count/index.rb'
 
 
 module FraktionSdk
