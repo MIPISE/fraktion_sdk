@@ -1,5 +1,6 @@
 module FraktionSdk
   module Inject
+    extend Helpers
     def self.create(hash = {})
       FraktionSdk.authenticated do |access_token, token_type|
         #required_keys = %i[from txs]

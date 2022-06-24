@@ -1,6 +1,7 @@
 module FraktionSdk
   module Tokens
     module TokenId
+      extend Helpers
       def self.index(hash = {})
         required_keys = %i[token_id]
         params = ensure_keys(hash, required_keys)
