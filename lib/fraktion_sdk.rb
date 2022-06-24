@@ -22,6 +22,7 @@ require_relative 'fraktion_sdk/tokens/index.rb'
 require_relative 'fraktion_sdk/tokens/count/index.rb'
 require_relative 'fraktion_sdk/tokens/metadata_updates/count/index.rb'
 require_relative 'fraktion_sdk/tokens/metadata_updates/index.rb'
+require_relative 'fraktion_sdk/accounts/address/show.rb'
 
 
 module FraktionSdk
