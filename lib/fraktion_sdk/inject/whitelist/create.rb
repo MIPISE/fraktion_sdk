@@ -1,4 +1,4 @@
-module FractionSdk
+module FraktionSdk
   module Inject
     module Whitelist
       extend Helpers
