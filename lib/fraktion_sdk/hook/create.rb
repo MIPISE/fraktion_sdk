@@ -1,4 +1,4 @@
-module FractionSdk
+module FraktionSdk
   module Hook
     extend Helpers
 
