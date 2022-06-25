@@ -11,6 +11,9 @@ class TestFraktionSdk < Minitest::Test
   require_relative "accounts/count/index_test.rb"
   require_relative "accounts/index_test.rb"
   require_relative "accounts/updates/count/index_test.rb"
+  require_relative "injections/index_test.rb"
+  require_relative "injections/count/index_test.rb"
+  require_relative "injections/index_test.rb"
   #def test_that_it_has_a_version_number
   #  refute_nil ::FraktionSdk::VERSION
   #end
