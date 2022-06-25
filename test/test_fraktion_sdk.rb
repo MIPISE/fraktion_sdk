@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 require "test_helper"
-require_relative "create_managed/create_test.rb"
+
 
 class TestFraktionSdk < Minitest::Test
-  include FraktionSdk::Create_managed
+  require_relative "create_managed/create_test.rb"
+  require_relative "inject/transfer/create_test.rb"
   #def test_that_it_has_a_version_number
   #  refute_nil ::FraktionSdk::VERSION
   #end
