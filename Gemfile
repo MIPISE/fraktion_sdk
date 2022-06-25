@@ -5,12 +5,13 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in fraktion_sdk.gemspec
 gemspec
 
-gem "rake", "~> 13.0"
+gem "rake"
 
 gem "activesupport"
 
-gem "minitest", "~> 5.0"
+gem "minitest"
+gem "minitest-reporters"
 
-gem "rubocop", "~> 1.21"
+gem "rubocop"
 
 gem "faraday_middleware"
