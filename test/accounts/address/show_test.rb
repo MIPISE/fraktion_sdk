@@ -1,7 +1,19 @@
 describe "Account Information on the account" do
-  it "call api in response" do
-    create_managed = FraktionSdk::Accounts::Address.show({address: "nicolas"}).body
-    puts create_managed
-    #assert_equal true, create_managed.has_key?("hash")
+  it "call api with address in response" do
+    params = {address: "KT1ScS8wnxNiQiBNC9Pe5gPLpp6DmizFLFcV"}
+    accounts_address = FraktionSdk::Accounts::Address.show(params)
+    assert_equal true, accounts_address.body.has_key?("address")
+  end
+
+  it "call api with whitelisted in response" do
+    params = {address: "KT1ScS8wnxNiQiBNC9Pe5gPLpp6DmizFLFcV"}
+    accounts_address = FraktionSdk::Accounts::Address.show(params)
+    assert_equal true, accounts_address.body.has_key?("whitelisted")
+  end
+
+  it "call api with tokens in response" do
+    params = {address: "KT1ScS8wnxNiQiBNC9Pe5gPLpp6DmizFLFcV"}
+    accounts_address = FraktionSdk::Accounts::Address.show(params)
+    assert_equal true, accounts_address.body.has_key?("tokens")
   end
 end
