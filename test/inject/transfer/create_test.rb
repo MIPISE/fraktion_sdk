@@ -3,12 +3,12 @@ describe "Inject transfer" do
     params =
     [
       {
-        "from": "KT1ScS8wnxNiQiBNC9Pe5gPLpp6DmizFLFcV",
+        "from": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
         "txs": [
           {
-            "to": "KT19f2HYzjoXkvUKwaJmtVNmE6uq4vdhy9Ws",
-            "token_id": "5",
-            "amount": "35"
+            "to": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
+            "token_id": "3",
+            "amount": "1"
           }
         ]
       }
@@ -21,12 +21,12 @@ describe "Inject transfer" do
     params =
     [
       {
-        "from": "KT1ScS8wnxNiQiBNC9Pe5gPLpp6DmizFLFcV",
+        "from": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
         "txs": [
           {
-            "to": "KT19f2HYzjoXkvUKwaJmtVNmE6uq4vdhy9Ws",
-            "token_id": "5",
-            "amount": "35"
+            "to": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
+            "token_id": "3",
+            "amount": "1"
           }
         ]
       }
