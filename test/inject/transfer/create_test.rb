@@ -1,6 +1,6 @@
 describe "Inject transfer" do
   it "call api with get hash in response" do
-    params =     
+    params =
     [
       {
         "from": "KT1ScS8wnxNiQiBNC9Pe5gPLpp6DmizFLFcV",
@@ -18,7 +18,7 @@ describe "Inject transfer" do
   end
 
   it "call api with get id" do
-    params = 
+    params =
     [
       {
         "from": "KT1ScS8wnxNiQiBNC9Pe5gPLpp6DmizFLFcV",
