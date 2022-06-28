@@ -1,5 +1,5 @@
 module FraktionSdk
-  module Create_managed
+  module CreateManaged
     extend Helpers
     class << self
       def create(hash = {})
