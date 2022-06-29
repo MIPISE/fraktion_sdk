@@ -6,7 +6,7 @@ describe "Inject transfer" do
         "from": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
         "txs": [
           {
-            "to": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
+            "to": "KT1PewFnyzvMTmqYdFxf7w7zTp5gQrCLgwPu",
             "token_id": "3",
             "amount": "1"
           }
@@ -24,7 +24,7 @@ describe "Inject transfer" do
         "from": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
         "txs": [
           {
-            "to": "KT1DvYea45MkJXiGtJcj1SpjjXzRbFohyUGC",
+            "to": "KT1PewFnyzvMTmqYdFxf7w7zTp5gQrCLgwPu",
             "token_id": "3",
             "amount": "1"
           }
