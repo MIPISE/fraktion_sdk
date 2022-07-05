@@ -22,7 +22,7 @@ describe "Mint : Mint a token" do
           "amount": "1"
         },
       ],
-      "info": { "metadfcsdfata": { "name": "blockchain_3" } },
+      "info": { "metadata": { "name": "blockchain_3" } },
       "options": {}
     }
 
