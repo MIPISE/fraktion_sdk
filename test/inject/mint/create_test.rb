@@ -1,13 +1,14 @@
 describe "Mint : Mint a token" do
   it "call api " do
+    functori_address = "KT1GBcTeiQd1G2Ry4Ph3fB9PYpYVy5uz4Y6Z"
     params = {
       "owners": [
         {
-          "address": "tz1Mxsc66En4HsVHr6rppYZW82ZpLhpupToC",
+          "address": functori_address,
           "amount": "1"
         },
       ],
-      "info": "3",
+      "info": { "metadata":  "3vdvd"},
       "options": {}
     }
     injection = FraktionSdk::Inject::Mint.create(params)
@@ -15,15 +16,16 @@ describe "Mint : Mint a token" do
   end
 
   it "call api when create token_id" do
+    functori_address = "KT1GBcTeiQd1G2Ry4Ph3fB9PYpYVy5uz4Y6Z"
     params = {
       "owners": [
         {
-          "address": "tz1Mxsc66En4HsVHr6rppYZW82ZpLhpupToC",
+          "address": functori_address,
           "amount": "1"
         },
       ],
-      "info": { "metadata": { "name": "blockchain_3" } },
-      "options": {}
+      "info": { "metadata":  "3vdvd"},
+      "options": { }
     }
 
     injection = FraktionSdk::Inject::Mint.create(params)
