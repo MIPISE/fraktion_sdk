@@ -18,12 +18,17 @@ module FraktionSdk
     end
 
     def login(challenge_id, challenge)
-      connect(request_content_type: :url_encoded).post("login") do |req|
-      end
+      challenge_reply = Digest::SHA256.hexdigest("#{FraktionSdk.configuration.user}#{FraktionSdk.configuration.password}")
+      hash = {
+        user: FraktionSdk.configuration.user,
+        challenge_id: challenge_id, 
+        challenge_reply: challenge_reply
+      }
+      conn(request_content_type: :url_encoded).post("/login", hash, "Content-Type" => "application/json")
     end
 
     def auth
-      conn(request_content_type: :url_encoded).get("connect") do |req|
+      conn(request_content_type: :url_encoded).get("/connect") do |req|
         request.headers['X-Csrf-Token'] = FraktionSdk.configuration.token 
       end
     end
@@ -36,7 +41,7 @@ module FraktionSdk
         if response.body.values_at('token').nil?
           challenge_id, challenge = response.body.values_at('challenge_id', 'challenge')
           result_login = login(challenge_id, challenge)
-          token = response.body.values_at('token')
+          token = result_login.body.values_at('token')
           FraktionSdk.configuration.token = token
           response = auth
           response = yield(response.body.values_at('token'))

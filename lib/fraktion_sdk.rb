@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require "digest"
 require "active_support"
 require "active_support/core_ext/hash/indifferent_access"
 require_relative "fraktion_sdk/version"
