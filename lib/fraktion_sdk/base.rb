@@ -17,18 +17,32 @@ module FraktionSdk
       @conn[request_content_type]
     end
 
+    def login(challenge_id, challenge)
+      connect(request_content_type: :url_encoded).post("login") do |req|
+      end
+    end
+
     def auth
-      conn(request_content_type: :url_encoded).post("#{FraktionSdk.configuration.url_auth}", {token: FractionSdk.configuration.token }) 
-      #do |req|
-      #end
+      conn(request_content_type: :url_encoded).get("connect") do |req|
+        request.headers['X-Csrf-Token'] = FraktionSdk.configuration.token 
+      end
     end
 
     def authenticated
       return yield(nil, nil) unless FraktionSdk.configuration.token == "production"
       response = auth
       if response.success?
-        access_token, token_type = response.body.values_at('access_token', 'token_Type')
-        response = yield(access_token, token_type)
+        #access_token, token_type = response.body.values_at('access_token', 'token_Type')
+        if response.body.values_at('token').nil?
+          challenge_id, challenge = response.body.values_at('challenge_id', 'challenge')
+          result_login = login(challenge_id, challenge)
+          token = response.body.values_at('token')
+          FraktionSdk.configuration.token = token
+          response = auth
+          response = yield(response.body.values_at('token'))
+        else
+          response = yield(response.body.values_at('token'))
+        end
       end
       response
     end

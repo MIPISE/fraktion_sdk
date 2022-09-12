@@ -3,9 +3,9 @@ module FraktionSdk
     extend Helpers
     class << self
       def create(hash = {})
-        FraktionSdk.authenticated do |access_token, token_type|
+        FraktionSdk.authenticated do |token|
           conn.post(generate_uri, hash.to_json,"Content-Type" => "application/json") do |req|
-            req.headers['Authorization'] = "#{token_type} #{access_token}" if access_token && token_type
+            req.headers['X-Csrf-Token'] = "#{token}" if token
           end
         end
       end

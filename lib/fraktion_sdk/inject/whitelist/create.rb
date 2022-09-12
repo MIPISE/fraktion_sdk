@@ -3,11 +3,11 @@ module FraktionSdk
     module Whitelist
       extend Helpers
       def self.create(hash = {})
-        FraktionSdk.authenticated do |access_token, token_type|
+        FraktionSdk.authenticated do |token|
           required_keys = %i[list]
           params = ensure_keys(hash, required_keys)
           conn.post(generate_uri, params.to_json,"Content-Type" => "application/json") do |req|
-            req.headers['Authorization'] = "#{token_type} #{access_token}" if access_token && token_type
+            req.headers['X-Csrf-Token'] = token if token
           end
         end
       end

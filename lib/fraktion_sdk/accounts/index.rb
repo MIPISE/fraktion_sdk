@@ -2,9 +2,9 @@ module FraktionSdk
   module Accounts
     extend Helpers
     def self.index(hash = {})
-      FraktionSdk.authenticated do |access_token, token_type|
+      FraktionSdk.authenticated do |token|
         conn.get(generate_uri, hash,"Content-Type" => "application/json") do |req|
-          req.headers['Authorization'] = "#{token_type} #{access_token}" if access_token && token_type
+          req.headers['X-Csrf-Token'] = token if token
         end
       end
     end
