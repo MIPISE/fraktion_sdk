@@ -4,7 +4,7 @@ module FraktionSdk
       extend Helpers
       class << self
         def index(hash = {})
-          required_keys = %i[token_id]
+          required_keys = %i[token_id meta]
           params = ensure_keys(hash, required_keys)
           token_id = params[:token_id] || params["token_id"]
           params.delete(:token_id) || params.delete("token_id")
