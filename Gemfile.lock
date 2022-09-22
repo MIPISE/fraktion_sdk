@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     fraktion_sdk (0.2.0)
+      activesupport (~> 6.1.5)
+      faraday_middleware (~> 1.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -54,7 +56,6 @@ GEM
     parser (3.1.1.0)
       ast (~> 2.4.1)
     rainbow (3.1.1)
-    rake (13.0.6)
     regexp_parser (2.2.1)
     rexml (3.2.5)
     rubocop (1.26.1)
@@ -80,13 +81,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activesupport
-  faraday_middleware
   fraktion_sdk!
-  minitest
-  minitest-reporters
-  rake
-  rubocop
+  minitest (~> 5.15.0)
+  minitest-reporters (~> 1.5.0)
+  rubocop (~> 1.26.1)
 
 BUNDLED WITH
    2.3.13
